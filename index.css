@@ -7,6 +7,11 @@
   --color6:#b8b5ff;
   --color7:#7868e6;
   --color8:#edeef7;
+  --color11:#cae4db;
+  --color9:#cdac81;
+  --color10:#00303f;
+  --color12:#654062;
+  --color13:#fa9579;
 }
 body{
   margin:0;
@@ -21,6 +26,7 @@ ul{
 
   flex-grow: 5;
 }
+/* nav */
 nav{
   position: fixed;
   top: 0;
@@ -45,7 +51,7 @@ nav{
   font-weight: bold;
   font-size: large;
 }
-
+/* home */
 .section_home{
   display: flex;
   flex-direction: column;
@@ -85,11 +91,11 @@ nav{
   height: 10vmin;
   cursor: pointer;
 }
-
+/* skills */
 .section_skills{
   margin: 15px 15px;
   border-radius: 5%;
-  height:30vh;
+  height:40vh;
   background-color:var(--color5);
 }
 .section_skills .title{
@@ -99,7 +105,7 @@ nav{
 }
 .section_skills .skill_title{
   position: relative;
-  top:-20px;
+  top:-3vh;
   font-weight: bold;
   color: var(--color2);
   font-size: 8vmin;
@@ -123,9 +129,73 @@ nav{
   width: 10vmin;
   height: 10vmin;
 }
-
-.section_third{
+/* about me */
+.section_aboutme{
+  margin: 5px 5px;
+  border-radius: 5%;
   height: 50vh;
-  background-color: var(--color6);
+  background-color: #ffe9d6;
 }
-
+.section_aboutme .title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+.section_aboutme .title .aboutme_title{
+  position: relative;
+  top:-3vh;
+}
+.section_aboutme .content_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_aboutme .content{
+  width : 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_aboutme .title .aboutme_title{
+  color: var(--color10);
+  font-size: 8vmin;
+  font-weight: bold;
+}
+.section_aboutme .content span div{
+  overflow: hidden;
+  opacity: 0;
+  height: 3.8vmin;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  font-size: 3.2vmin;
+  margin-top: 2vh;
+}
+/* .section_aboutme .content span:nth-child(1) div{
+  animation: typeingAny 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+} */
+/* .section_aboutme .content span:nth-child(2) div{
+  animation: typeingAny 2s 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.section_aboutme .content span:nth-child(3) div{
+  animation: typeingAny 2s 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.section_aboutme .content span:nth-child(4) div{
+  animation: typeingAny 2s 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+} */
+@keyframes typeingAny{
+  0%{width: 0%;opacity: 1;}
+  100%{width: 100%;opacity: 1;}
+}
