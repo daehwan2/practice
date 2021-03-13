@@ -13,6 +13,11 @@
   --color12:#654062;
   --color13:#fa9579;
 }
+.flexboxcenter_class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
 body{
   margin:0;
   padding: 0;
@@ -121,46 +126,127 @@ nav{
   justify-content: center;
   align-items: center;
 }
-.section_skills .skills_list li span{
+.section_skills .skills_list li .skills{
   font-size: 2vmin;
   color:var(--color1)
 }
 .section_skills .skills_list img{
   width: 10vmin;
   height: 10vmin;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+.section_skills .skills_list li .graph_temp{
+  width: 10vmin;
+  background-color: var(--color9);
+  height: 2vmin;
+}
+.section_skills .skills_list li:nth-child(1) .graph_temp .graph{
+  background-color:var(--color10);
+  height: 100%;
+  /* animation: graphAni1 2s forwards; */
+  z-index: 1;
+}
+.section_skills .skills_list li:nth-child(2) .graph_temp .graph{
+  background-color:var(--color10);
+  height: 100%;
+  /* animation: graphAni2 2s forwards; */
+  z-index: 1;
+}
+.section_skills .skills_list li:nth-child(3) .graph_temp .graph{
+  background-color:var(--color10);
+  height: 100%;
+  /* animation: graphAni3 2s forwards; */
+  z-index: 1;
+}
+.section_skills .skills_list li:nth-child(4) .graph_temp .graph{
+  background-color:var(--color10);
+  height: 100%;
+  /* animation: graphAni4 2s forwards; */
+  z-index: 1;
+}
+.section_skills .skills_list li:nth-child(5) .graph_temp .graph{
+  background-color:var(--color10);
+  height: 100%;
+  /* animation: graphAni5 2s forwards; */
+  z-index: 1;
+}
+.section_skills .skills_list li:nth-child(6) .graph_temp .graph{
+  background-color:var(--color10);
+  height: 100%;
+  /* animation: graphAni6 2s forwards; */
+  z-index: 1;
+}
+@keyframes graphAni1{
+  0%{width:0%}
+  100%{width:70%}
+}
+@keyframes graphAni2{
+  0%{width:0%}
+  100%{width:60%}
+}
+@keyframes graphAni3{
+  0%{width:0%}
+  100%{width:60%}
+}
+@keyframes graphAni4{
+  0%{width:0%}
+  100%{width:95%}
+}
+@keyframes graphAni5{
+  0%{width:0%}
+  100%{width:90%}
+}
+@keyframes graphAni6{
+  0%{width:0%}
+  100%{width:80%}
 }
 /* about me */
 .section_aboutme{
   margin: 5px 5px;
   border-radius: 5%;
-  height: 50vh;
+  height: 80vh;
   background-color: #ffe9d6;
+  /* background-image: url('./image/me.jpg'); */
+  /* background-size: cover; */
 }
-.section_aboutme .title{
+.aboutme_title{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5vh;
+  height: 10px;
 }
-.section_aboutme .title .aboutme_title{
+.aboutme_title .title{
   position: relative;
-  top:-3vh;
-}
-.section_aboutme .content_container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section_aboutme .content{
-  width : 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section_aboutme .title .aboutme_title{
+  top:3vh;
   color: var(--color10);
   font-size: 8vmin;
   font-weight: bold;
+}
+.section_aboutme .content_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width:1024px){
+  .section_aboutme .content_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  align-items: center;
+  }
+}
+.section_aboutme .content_container img{
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 30%;
+}
+.section_aboutme .content{
+  width : 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section_aboutme .content span div{
   overflow: hidden;

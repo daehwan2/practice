@@ -18,5 +18,20 @@ const pageAniFunc = function () {
         content.style.animation='typeingAny 2s  6s forwards linear';
         first=false;
     }
+    if(window.pageYOffset>pageYmax){
+        console.log('now');
+        let content =document.querySelector('.section_skills .skills_list li:nth-child(1) .graph_temp .graph');
+        content.style.animation='graphAni1 3s forwards';
+        content =document.querySelector('.section_skills .skills_list li:nth-child(2) .graph_temp .graph');
+        content.style.animation='graphAni2 3s forwards';
+        content =document.querySelector('.section_skills .skills_list li:nth-child(3) .graph_temp .graph');
+        content.style.animation='graphAni3 3s forwards';
+        content =document.querySelector('.section_skills .skills_list li:nth-child(4) .graph_temp .graph');
+        content.style.animation='graphAni4 3s forwards';
+        content =document.querySelector('.section_skills .skills_list li:nth-child(5) .graph_temp .graph');
+        content.style.animation='graphAni5 3s forwards';
+        content =document.querySelector('.section_skills .skills_list li:nth-child(6) .graph_temp .graph');
+        content.style.animation='graphAni6 3s forwards';
+    }
 }
 window.addEventListener('scroll', pageAniFunc);
