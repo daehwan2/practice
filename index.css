@@ -21,6 +21,7 @@
 body{
   margin:0;
   padding: 0;
+  background-color: var(--color8);
 }
 ul{
   list-style: none;
@@ -31,8 +32,7 @@ ul{
 nav{
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
 
 
   background-color: var(--color1);
@@ -52,6 +52,11 @@ nav{
 }
 .navcontainer .dropdown_list{
   display: none;
+  width: 100%;
+  padding-left: 3vw;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
 }
 .navcontainer .closeBtn{
   display: none;
@@ -62,6 +67,10 @@ nav{
   margin: 5px;
   cursor: pointer;
   right: 0;
+
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 .navcontainer .dropdownBtn{
   display: block;

@@ -1,12 +1,12 @@
 const scrollSize =document.querySelector('.scroll_container').scrollHeight-window.innerHeight;
 console.log(scrollSize);
-const pageYmax = document.querySelector('.scroll_container').scrollHeight-scrollSize-30;
-console.log(pageYmax);
+const pageYmax = document.querySelector('.scroll_container').scrollHeight-scrollSize+30;
+console.log("Ymax:",pageYmax);
 
 let first =true;
 const pageAniFunc = function () {
     console.log(window.pageYOffset);
-    if(window.pageYOffset>pageYmax*(1/4) && first){
+    if(window.pageYOffset>pageYmax*0.4 && first){
         //애니메이션 시작
         let content = document.querySelector('.section_aboutme .content span:nth-child(1) div');
         content.style.animation='typeingAny 2s forwards linear';
