@@ -352,6 +352,23 @@ nav{
 .section_project ul li div{
   text-align: center;
 }
+/* contact */
+.contact_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vmin;
+}
+.contact_title .title{
+  color: var(--color10);
+  font-size: 8vmin;
+  font-weight: bold;
+}
+.section_contact{
+  font-size: 5vw;
+  text-align: center;
+  font-weight: bold;
+}
 @media (min-width:1025px){
   .section_aboutme .content_container{
     display: flex;
