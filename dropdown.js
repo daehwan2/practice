@@ -22,6 +22,8 @@ function dropdownFunc(){
 }
 function closeFunc(){
     title.style.display='block';
+    title.style.marginLeft='10px';
+    title.style.marginTop='5px';
     dropdownButton.style.display='block';
     closeBtn.style.display='none';
     dropdown_list.style.display='none';
