@@ -9,13 +9,18 @@ const pageAniFunc = function () {
     if(window.pageYOffset>pageYmax*0.4 && first){
         //애니메이션 시작
         let content = document.querySelector('.section_aboutme .content span:nth-child(1) div');
-        content.style.animation='typeingAny 2s forwards linear';
+        content.style.animation='typeingAny 1.5s forwards linear';
         content = document.querySelector('.section_aboutme .content span:nth-child(2) div');
-        content.style.animation='typeingAny 2s  2s forwards linear';
+        content.style.animation='typeingAny 1.5s  1.5s forwards linear';
         content = document.querySelector('.section_aboutme .content span:nth-child(3) div');
-        content.style.animation='typeingAny 2s  4s forwards linear';
+        content.style.animation='typeingAny 1.5s  3s forwards linear';
         content = document.querySelector('.section_aboutme .content span:nth-child(4) div');
-        content.style.animation='typeingAny 2s  6s forwards linear';
+        content.style.animation='typeingAny 1.5s  4.5s forwards linear';
+
+        const container=document.querySelector(".section_aboutme");
+        container.style.animation='opacityAni 1s forwards';
+        const title = document.querySelector(".aboutme_title .title");
+        title.style.animation='opacityAni 1s forwards';
         first=false;
     }
     if(window.pageYOffset>pageYmax){
@@ -32,6 +37,16 @@ const pageAniFunc = function () {
         content.style.animation='graphAni5 3s forwards';
         content =document.querySelector('.section_skills .skills_list li:nth-child(6) .graph_temp .graph');
         content.style.animation='graphAni6 3s forwards';
+
+        const container=document.querySelector(".section_skills");
+        container.style.animation='opacityAni 1s forwards';
+    }
+    if(window.pageYOffset>pageYmax*1.5){
+        const container=document.querySelector(".section_project");
+        container.style.animation='opacityAni 1s forwards';
+        const title = document.querySelector(".project_title");
+        title.style.animation='opacityAni 1s forwards';
+        
     }
 }
 window.addEventListener('scroll', pageAniFunc);
